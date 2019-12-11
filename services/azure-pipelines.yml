@@ -8,7 +8,7 @@ trigger:
   # Using Variables
   # https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch
 variables:
-  solution: services/SmartElevator.sln
+  solution: SmartElevator.sln
   buildPlatform: Any CPU
   buildConfiguration: Release
   vmImage: ubuntu-16.04
@@ -27,7 +27,7 @@ stages:
       pool:
         vmImage: '$(vmImage)'
       steps:
-      - script: dotnet restore '$(solution)'
+      - script: dotnet restore 'services/$(solution)'
 
 ################################################################################
 # Build
@@ -41,7 +41,7 @@ stages:
       pool:
         vmImage: '$(vmImage)'
       steps:
-      - script: dotnet build '$(solution)'
+      - script: dotnet build 'services/$(solution)'
 
 
 # pool:
