@@ -8,7 +8,7 @@ trigger:
   # Using Variables
   # https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch
 variables:
-  solution: SmartElevator.sln
+  solution: services/SmartElevator.sln
   buildPlatform: Any CPU
   buildConfiguration: Release
   vmImage: ubuntu-16.04
