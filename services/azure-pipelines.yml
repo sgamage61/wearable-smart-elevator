@@ -1,16 +1,49 @@
-pool:
-  vmImage: 'Ubuntu 16.04'
-steps:
-  - script: |
-      npm install
-    displayName: "npm install"
-  - task: ArchiveFiles@2
-    displayName: "Archive files"
-    inputs:
-      rootFolderOrFile: "$(System.DefaultWorkingDirectory)"
-      includeRootFolder: false
-      archiveFile: "$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip"
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: '$(System.DefaultWorkingDirectory)'
-      name: 'drop'
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    steps:
+    - script: |
+        cd services
+        dotnet restore
+        dotnet build --configuration Release
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: publish
+        publishWebProjects: false
+        projects: '**/*.csproj'
+        arguments: '-c Release -o publish_output'
+        modifyOutputPath: false
+        zipAfterPublish: false
+        workingDirectory: 'services/'
+    - task: ArchiveFiles@2
+      displayName: "Archive Files"
+      inputs:
+        rootFolderOrFile: "$(System.DefaultWorkingDirectory)/services/publish_output"
+        includeRootFolder: false
+        archiveFile: "$(Build.ArtifactStagingDirectory)/build$(Build.BuildId).zip"
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+- stage: Release
+  jobs:
+  - job: Release
+    steps:
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        downloadPath: '$(System.ArtifactsDirectory)'
+        artifactName: 'drop'
+    - task: AzureFunctionApp@1
+      displayName: 'Azure Function App Deploy'
+      inputs:
+        azureSubscription: 'Azure subscription 1 (5c2278c0-c753-423f-be79-3d8b960fb179)'
+        appType: 'functionApp'
+        appName: 'SmartElevator'
+        package: '$(System.ArtifactsDirectory)/**/*.zip'
+        deploymentMethod: 'auto'
