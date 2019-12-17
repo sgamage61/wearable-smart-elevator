@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD5821AB23A901FD00AC7A75 /* SmartElevator WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CD5821AA23A901FD00AC7A75 /* SmartElevator WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CD5821B123A901FD00AC7A75 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5821AF23A901FD00AC7A75 /* Interface.storyboard */; };
+		CD5821B323A9020000AC7A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5821B223A9020000AC7A75 /* Assets.xcassets */; };
+		CD5821BA23A9020000AC7A75 /* SmartElevator WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CD5821B923A9020000AC7A75 /* SmartElevator WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CD5821BF23A9020000AC7A75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5821BE23A9020000AC7A75 /* ContentView.swift */; };
+		CD5821C123A9020000AC7A75 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5821C023A9020000AC7A75 /* HostingController.swift */; };
+		CD5821C323A9020000AC7A75 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5821C223A9020000AC7A75 /* ExtensionDelegate.swift */; };
+		CD5821C523A9020000AC7A75 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5821C423A9020000AC7A75 /* NotificationController.swift */; };
+		CD5821C723A9020000AC7A75 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5821C623A9020000AC7A75 /* NotificationView.swift */; };
+		CD5821C923A9020100AC7A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5821C823A9020100AC7A75 /* Assets.xcassets */; };
+		CD5821CC23A9020100AC7A75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5821CB23A9020100AC7A75 /* Preview Assets.xcassets */; };
+		CD5821DD23A909DF00AC7A75 /* ElevatorAssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5821DC23A909DF00AC7A75 /* ElevatorAssignmentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD5821AC23A901FD00AC7A75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD5821A023A901FD00AC7A75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD5821A923A901FD00AC7A75;
+			remoteInfo = "SmartElevator WatchKit App";
+		};
+		CD5821BB23A9020000AC7A75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD5821A023A901FD00AC7A75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD5821B823A9020000AC7A75;
+			remoteInfo = "SmartElevator WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD5821D423A9020100AC7A75 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CD5821BA23A9020000AC7A75 /* SmartElevator WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5821D823A9020100AC7A75 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CD5821AB23A901FD00AC7A75 /* SmartElevator WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CD5821A623A901FD00AC7A75 /* SmartElevator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartElevator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5821AA23A901FD00AC7A75 /* SmartElevator WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartElevator WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5821B023A901FD00AC7A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		CD5821B223A9020000AC7A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD5821B423A9020000AC7A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5821B923A9020000AC7A75 /* SmartElevator WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmartElevator WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5821BE23A9020000AC7A75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD5821C023A9020000AC7A75 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		CD5821C223A9020000AC7A75 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		CD5821C423A9020000AC7A75 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		CD5821C623A9020000AC7A75 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		CD5821C823A9020100AC7A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD5821CB23A9020100AC7A75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD5821CD23A9020100AC7A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5821CE23A9020100AC7A75 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CD5821DC23A909DF00AC7A75 /* ElevatorAssignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatorAssignmentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD5821B623A9020000AC7A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD58219F23A901FD00AC7A75 = {
+			isa = PBXGroup;
+			children = (
+				CD5821AE23A901FD00AC7A75 /* SmartElevator WatchKit App */,
+				CD5821BD23A9020000AC7A75 /* SmartElevator WatchKit Extension */,
+				CD5821A723A901FD00AC7A75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD5821A723A901FD00AC7A75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD5821A623A901FD00AC7A75 /* SmartElevator.app */,
+				CD5821AA23A901FD00AC7A75 /* SmartElevator WatchKit App.app */,
+				CD5821B923A9020000AC7A75 /* SmartElevator WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD5821AE23A901FD00AC7A75 /* SmartElevator WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				CD5821AF23A901FD00AC7A75 /* Interface.storyboard */,
+				CD5821B223A9020000AC7A75 /* Assets.xcassets */,
+				CD5821B423A9020000AC7A75 /* Info.plist */,
+			);
+			path = "SmartElevator WatchKit App";
+			sourceTree = "<group>";
+		};
+		CD5821BD23A9020000AC7A75 /* SmartElevator WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CD5821BE23A9020000AC7A75 /* ContentView.swift */,
+				CD5821DC23A909DF00AC7A75 /* ElevatorAssignmentView.swift */,
+				CD5821C023A9020000AC7A75 /* HostingController.swift */,
+				CD5821C223A9020000AC7A75 /* ExtensionDelegate.swift */,
+				CD5821C423A9020000AC7A75 /* NotificationController.swift */,
+				CD5821C623A9020000AC7A75 /* NotificationView.swift */,
+				CD5821C823A9020100AC7A75 /* Assets.xcassets */,
+				CD5821CD23A9020100AC7A75 /* Info.plist */,
+				CD5821CE23A9020100AC7A75 /* PushNotificationPayload.apns */,
+				CD5821CA23A9020100AC7A75 /* Preview Content */,
+			);
+			path = "SmartElevator WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		CD5821CA23A9020100AC7A75 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD5821CB23A9020100AC7A75 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD5821A523A901FD00AC7A75 /* SmartElevator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD5821D923A9020100AC7A75 /* Build configuration list for PBXNativeTarget "SmartElevator" */;
+			buildPhases = (
+				CD5821A423A901FD00AC7A75 /* Resources */,
+				CD5821D823A9020100AC7A75 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD5821AD23A901FD00AC7A75 /* PBXTargetDependency */,
+			);
+			name = SmartElevator;
+			productName = SmartElevator;
+			productReference = CD5821A623A901FD00AC7A75 /* SmartElevator.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		CD5821A923A901FD00AC7A75 /* SmartElevator WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD5821D523A9020100AC7A75 /* Build configuration list for PBXNativeTarget "SmartElevator WatchKit App" */;
+			buildPhases = (
+				CD5821A823A901FD00AC7A75 /* Resources */,
+				CD5821D423A9020100AC7A75 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD5821BC23A9020000AC7A75 /* PBXTargetDependency */,
+			);
+			name = "SmartElevator WatchKit App";
+			productName = "SmartElevator WatchKit App";
+			productReference = CD5821AA23A901FD00AC7A75 /* SmartElevator WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CD5821B823A9020000AC7A75 /* SmartElevator WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD5821D123A9020100AC7A75 /* Build configuration list for PBXNativeTarget "SmartElevator WatchKit Extension" */;
+			buildPhases = (
+				CD5821B523A9020000AC7A75 /* Sources */,
+				CD5821B623A9020000AC7A75 /* Frameworks */,
+				CD5821B723A9020000AC7A75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmartElevator WatchKit Extension";
+			productName = "SmartElevator WatchKit Extension";
+			productReference = CD5821B923A9020000AC7A75 /* SmartElevator WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD5821A023A901FD00AC7A75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Jacob Mokuvos";
+				TargetAttributes = {
+					CD5821A523A901FD00AC7A75 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					CD5821A923A901FD00AC7A75 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					CD5821B823A9020000AC7A75 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = CD5821A323A901FD00AC7A75 /* Build configuration list for PBXProject "SmartElevator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD58219F23A901FD00AC7A75;
+			productRefGroup = CD5821A723A901FD00AC7A75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD5821A523A901FD00AC7A75 /* SmartElevator */,
+				CD5821A923A901FD00AC7A75 /* SmartElevator WatchKit App */,
+				CD5821B823A9020000AC7A75 /* SmartElevator WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD5821A423A901FD00AC7A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5821A823A901FD00AC7A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5821B323A9020000AC7A75 /* Assets.xcassets in Resources */,
+				CD5821B123A901FD00AC7A75 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5821B723A9020000AC7A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5821CC23A9020100AC7A75 /* Preview Assets.xcassets in Resources */,
+				CD5821C923A9020100AC7A75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD5821B523A9020000AC7A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5821C123A9020000AC7A75 /* HostingController.swift in Sources */,
+				CD5821BF23A9020000AC7A75 /* ContentView.swift in Sources */,
+				CD5821C523A9020000AC7A75 /* NotificationController.swift in Sources */,
+				CD5821DD23A909DF00AC7A75 /* ElevatorAssignmentView.swift in Sources */,
+				CD5821C323A9020000AC7A75 /* ExtensionDelegate.swift in Sources */,
+				CD5821C723A9020000AC7A75 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD5821AD23A901FD00AC7A75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD5821A923A901FD00AC7A75 /* SmartElevator WatchKit App */;
+			targetProxy = CD5821AC23A901FD00AC7A75 /* PBXContainerItemProxy */;
+		};
+		CD5821BC23A9020000AC7A75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD5821B823A9020000AC7A75 /* SmartElevator WatchKit Extension */;
+			targetProxy = CD5821BB23A9020000AC7A75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD5821AF23A901FD00AC7A75 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD5821B023A901FD00AC7A75 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD5821CF23A9020100AC7A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD5821D023A9020100AC7A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD5821D223A9020100AC7A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartElevator WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = HRFW3C65X4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SmartElevator WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CapTech.SmartElevator.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		CD5821D323A9020100AC7A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartElevator WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = HRFW3C65X4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SmartElevator WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CapTech.SmartElevator.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		CD5821D623A9020100AC7A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HRFW3C65X4;
+				IBSC_MODULE = SmartElevator_WatchKit_Extension;
+				INFOPLIST_FILE = "SmartElevator WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CapTech.SmartElevator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		CD5821D723A9020100AC7A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HRFW3C65X4;
+				IBSC_MODULE = SmartElevator_WatchKit_Extension;
+				INFOPLIST_FILE = "SmartElevator WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CapTech.SmartElevator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		CD5821DA23A9020100AC7A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HRFW3C65X4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CapTech.SmartElevator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CD5821DB23A9020100AC7A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HRFW3C65X4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CapTech.SmartElevator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD5821A323A901FD00AC7A75 /* Build configuration list for PBXProject "SmartElevator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5821CF23A9020100AC7A75 /* Debug */,
+				CD5821D023A9020100AC7A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD5821D123A9020100AC7A75 /* Build configuration list for PBXNativeTarget "SmartElevator WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5821D223A9020100AC7A75 /* Debug */,
+				CD5821D323A9020100AC7A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD5821D523A9020100AC7A75 /* Build configuration list for PBXNativeTarget "SmartElevator WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5821D623A9020100AC7A75 /* Debug */,
+				CD5821D723A9020100AC7A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD5821D923A9020100AC7A75 /* Build configuration list for PBXNativeTarget "SmartElevator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5821DA23A9020100AC7A75 /* Debug */,
+				CD5821DB23A9020100AC7A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD5821A023A901FD00AC7A75 /* Project object */;
+}
