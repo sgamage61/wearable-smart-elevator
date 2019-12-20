@@ -15,4 +15,8 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controller\" />
+    <Folder Include="service\" />
+  </ItemGroup>
 </Project>
