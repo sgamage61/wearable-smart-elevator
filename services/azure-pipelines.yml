@@ -1,106 +1,49 @@
-################################################################################
-# Azure Pipeline
-################################################################################
-
-trigger:
-  branches:
-    include:
-      - master
-  paths:
-    include:
-      - services/*
-    exclude:
-      - wearable/*
-
-pr:
-  branches:
-    include:
-      - master
-  paths:
-    include:
-      - services/*
-    exclude:
-      - wearable/*
-
-variables:
-  solution: SmartElevator.sln
-  vm_image: ubuntu-16.04
-  subscription_connection: 'Azure subscription 1 (5c2278c0-c753-423f-be79-3d8b960fb179)'
-
-
 stages:
-
-################################################################################
-# Build
-################################################################################
-
 - stage: Build
-  displayName: Build
-
   jobs:
-    - job: DotNet_Build
-      pool:
-        vmImage: '$(vm_image)'
-      steps:
-      - script: |
-          dotnet restore 'services/$(solution)'
-          dotnet build 'services/$(solution)' --configuration Release
-      
-      # Create release
-      - task: DotNetCoreCLI@2
-        inputs:
-          command: publish
-          publishWebProjects: false
-          projects: '**/*.csproj'
-          arguments: '-c Release -o publish_output'
-          modifyOutputPath: false
-          zipAfterPublish: false
-          workingDirectory: 'services/'
-
-      # Archive the release output
-      - task: ArchiveFiles@2
-        displayName: "Archive Files"
-        inputs:
-          rootFolderOrFile: "$(System.DefaultWorkingDirectory)/services/publish_output"
-          includeRootFolder: false
-          archiveFile: "$(Build.ArtifactStagingDirectory)/build$(Build.BuildId).zip"
-      
-      # Publish build to container
-      - task: PublishBuildArtifacts@1
-        inputs:
-          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-          ArtifactName: 'drop'
-          publishLocation: 'Container'
-
-################################################################################
-# Deploy
-################################################################################
-
-- stage: Deploy
-  displayName: Deploy 
-
+  - job: Build
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    steps:
+    - script: |
+        cd services
+        dotnet restore
+        dotnet build --configuration Release
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: publish
+        publishWebProjects: false
+        projects: '**/*.csproj'
+        arguments: '-c Release -o publish_output'
+        modifyOutputPath: false
+        zipAfterPublish: false
+        workingDirectory: 'services/'
+    - task: ArchiveFiles@2
+      displayName: "Archive Files"
+      inputs:
+        rootFolderOrFile: "$(System.DefaultWorkingDirectory)/services/publish_output"
+        includeRootFolder: false
+        archiveFile: "$(Build.ArtifactStagingDirectory)/build$(Build.BuildId).zip"
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+- stage: Release
   jobs:
-    - job: 
-      pool:
-        vmImage: '$(vm_image)'
-      steps:
-
-      # Download the build artifact from build step
-      - task: DownloadBuildArtifacts@0
-        inputs:
-          buildType: 'current'
-          downloadType: 'single'
-          downloadPath: '$(System.ArtifactsDirectory)'
-          artifactName: 'drop'
-
-      # Deploy the Azure Function App
-      - task: AzureFunctionApp@1
-        displayName: 'Azure Function App Deploy'
-        inputs:
-          azureSubscription: '$(subscription_connection)'
-          # Azure subscription 1 (5c2278c0-c753-423f-be79-3d8b960fb179)'
-          appType: 'functionApp'
-          appName: 'SmartElevator' #TODO make this a var if used more than once
-          package: '$(System.ArtifactsDirectory)/**/*.zip' 
-          deploymentMethod: 'auto'
-
+  - job: Release
+    steps:
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        downloadPath: '$(System.ArtifactsDirectory)'
+        artifactName: 'drop'
+    - task: AzureFunctionApp@1
+      displayName: 'Azure Function App Deploy'
+      inputs:
+        azureSubscription: 'Azure subscription 1 (5c2278c0-c753-423f-be79-3d8b960fb179)'
+        appType: 'functionApp'
+        appName: 'SmartElevator'
+        package: '$(System.ArtifactsDirectory)/**/*.zip'
+        deploymentMethod: 'auto'
